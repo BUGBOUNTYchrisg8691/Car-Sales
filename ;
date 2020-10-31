@@ -14,9 +14,7 @@ const App = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <h2 class="is-family-monospace has-text-weigth-bold is-capitalized">
-        Please choose a car
-      </h2>
+      <h2 class="is-family-secondary">Please choose a car</h2>
       {Object.keys(state).map((key) => {
         const regex = new RegExp(/^[0-9]+$/);
         if (regex.test(key)) {
