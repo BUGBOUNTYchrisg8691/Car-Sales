@@ -5,7 +5,7 @@ const AdditionalFeature = (props) => {
     <li>
       {/* Add an onClick that will let you add a feature to your car */}
       <button
-        onClick={() => props.handleAddFeature(props.feature)}
+        onClick={() => props.removeFeature(props.feature)}
         className="button"
       >
         Add
@@ -15,4 +15,11 @@ const AdditionalFeature = (props) => {
   );
 };
 
+//function mapStateToProps(state) {
+//return {
+//feature: state.feature,
+//};
+//}
+
+//export default connect(mapStateToProps, { removeFeature })(AdditionalFeature);
 export default AdditionalFeature;
