@@ -14,12 +14,13 @@ const App = () => {
   const dispatch = useDispatch();
   return (
     <>
+      <h2>Please choose a car</h2>
       {Object.keys(state).map((key) => {
         const regex = new RegExp(/^[0-9]+$/);
         if (regex.test(key)) {
           return (
             <Link
-              className="car-link"
+              className="car-link button"
               onClick={() => dispatch(changeCar(state[key].id))}
               to={`/${state[key].id}`}
             >
@@ -42,7 +43,7 @@ const App = () => {
           </div>
         </Route>
         <Route path="/">
-          <h2>Please choose a car</h2>
+          <div></div>
         </Route>
       </Switch>
     </>
