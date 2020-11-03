@@ -9,6 +9,7 @@ const AddedFeature = (props) => {
       {}
       {/* Add an onClick to run a function to remove a feature */}
       <button
+        key={props.feature.name}
         onClick={() => dispatch(removeFeature(props.feature))}
         className="button"
       >

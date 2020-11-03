@@ -1,7 +1,6 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import AdditionalFeature from "./AdditionalFeature";
-import { addFeature } from "../actions";
 
 const AdditionalFeatures = (props) => {
   const additionalFeatures = useSelector((state) => state.additionalFeatures);
@@ -14,7 +13,6 @@ const AdditionalFeatures = (props) => {
             <AdditionalFeature
               key={item.id}
               feature={item}
-              addFeature={addFeature}
             />
           ))}
         </ol>

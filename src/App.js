@@ -14,7 +14,7 @@ const App = () => {
   const dispatch = useDispatch();
   return (
     <>
-      <h2 class="is-family-monospace has-text-weigth-bold is-capitalized">
+      <h2 className="is-family-monospace has-text-weigth-bold is-capitalized">
         Please choose a car
       </h2>
       {Object.keys(state).map((key) => {
@@ -22,6 +22,7 @@ const App = () => {
         if (regex.test(key)) {
           return (
             <Link
+              key={key}
               className="car-link button"
               onClick={() => dispatch(changeCar(state[key].id))}
               to={`/${state[key].id}`}
