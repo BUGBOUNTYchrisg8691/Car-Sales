@@ -1,5 +1,6 @@
 import React from "react";
 import { useDispatch } from "react-redux";
+import { removeFeature } from "../actions";
 
 const AddedFeature = (props) => {
   const dispatch = useDispatch();
@@ -8,7 +9,7 @@ const AddedFeature = (props) => {
       {}
       {/* Add an onClick to run a function to remove a feature */}
       <button
-        onClick={() => dispatch(props.removeFeature(props.feature))}
+        onClick={() => dispatch(removeFeature(props.feature))}
         className="button"
       >
         X

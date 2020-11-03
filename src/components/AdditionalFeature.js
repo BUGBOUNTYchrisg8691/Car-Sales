@@ -17,11 +17,4 @@ const AdditionalFeature = (props) => {
   );
 };
 
-//function mapStateToProps(state) {
-//return {
-//feature: state.feature,
-//};
-//}
-
-//export default connect(mapStateToProps, { removeFeature })(AdditionalFeature);
 export default AdditionalFeature;
